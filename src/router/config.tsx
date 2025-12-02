@@ -1,5 +1,9 @@
 import { lazy } from 'react';
-import { RouteObject } from 'react-router-dom';
+import { Outlet, RouteObject } from 'react-router-dom';
+import Layout from '@/components/layout/Layout';
+import BuyerLayout from '@/components/layout/BuyerLayout';
+import AdminLayout from '@/components/layout/AdminLayout';
+import SupplierLayout from '@/components/layout/SupplierLayout';
 
 const HomePage = lazy(() => import('../pages/home/page'));
 const ProductsPage = lazy(() => import('../pages/products/page'));
@@ -20,6 +24,7 @@ const BuyerDashboardPage = lazy(() => import('../pages/buyer/dashboard/page'));
 const BuyerProfilePage = lazy(() => import('../pages/buyer/profile/page'));
 const CompanyProfilePage = lazy(() => import('../pages/buyer/company/page'));
 const BuyerRFQPage = lazy(() => import('../pages/buyer/rfq/page'));
+const BuyerRFQCreatePage = lazy(() => import('../pages/buyer/rfq/create'));
 const BuyerOrdersPage = lazy(() => import('../pages/buyer/orders/page'));
 const BuyerMessagesPage = lazy(() => import('../pages/buyer/messages/page'));
 const InquiryListPage = lazy(() => import('../pages/buyer/inquiry-list/page'));
@@ -62,219 +67,127 @@ const ContactPage = lazy(() => import('../pages/contact/page'));
 const BecomeSupplierPage = lazy(() => import('../pages/become-supplier/page'));
 const SupplierProfilePage = lazy(() => import('../pages/supplier-profile/page'));
 const CategoriesPage = lazy(() => import('../pages/categories/page'));
+const PricingLegacyPage = lazy(() => import('../pages/PricingPage'));
+
+function PublicLayout() {
+  return (
+    <Layout>
+      <Outlet />
+    </Layout>
+  );
+}
+
+function BuyerShell() {
+  return (
+    <BuyerLayout>
+      <Outlet />
+    </BuyerLayout>
+  );
+}
+
+function SupplierShell() {
+  return (
+    <SupplierLayout>
+      <Outlet />
+    </SupplierLayout>
+  );
+}
+
+function AdminShell() {
+  return (
+    <AdminLayout>
+      <Outlet />
+    </AdminLayout>
+  );
+}
 
 const routes: RouteObject[] = [
   {
-    path: '/',
-    element: <HomePage />,
+    element: <PublicLayout />,
+    children: [
+      { path: '/', element: <HomePage /> },
+      { path: '/home', element: <HomePage /> },
+      { path: '/products', element: <ProductsPage /> },
+      { path: '/product/:id', element: <ProductDetailPage /> },
+      { path: '/suppliers', element: <SuppliersPage /> },
+      { path: '/supplier/:id', element: <SupplierProfilePage /> },
+      { path: '/categories', element: <CategoriesPage /> },
+      { path: '/pricing', element: <PricingPage /> },
+      { path: '/plans', element: <PricingLegacyPage /> },
+      { path: '/ranking', element: <RankingPage /> },
+      { path: '/buyers', element: <BuyersPage /> },
+      { path: '/trade-shows', element: <TradeShowsPage /> },
+      { path: '/news', element: <NewsPage /> },
+      { path: '/trust', element: <TrustPage /> },
+      { path: '/help', element: <HelpPage /> },
+      { path: '/faq', element: <HelpPage /> },
+      { path: '/terms', element: <TermsPage /> },
+      { path: '/privacy', element: <PrivacyPage /> },
+      { path: '/about', element: <AboutPage /> },
+      { path: '/contact', element: <ContactPage /> },
+      { path: '/become-supplier', element: <BecomeSupplierPage /> },
+      { path: '/login', element: <LoginPage /> },
+      { path: '/register', element: <RegisterPage /> },
+      { path: '/auth/login', element: <LoginPage /> },
+      { path: '/auth/register', element: <RegisterPage /> },
+      { path: '/auth/supplier-register', element: <SupplierRegisterPage /> },
+      { path: '/auth/forgot-password', element: <ForgotPasswordPage /> },
+      { path: '/auth/verify-email', element: <VerifyEmailPage /> },
+      { path: '/auth/admin-login', element: <AdminLoginPage /> },
+    ],
   },
   {
-    path: '/products',
-    element: <ProductsPage />,
+    path: '/buyer',
+    element: <BuyerShell />,
+    children: [
+      { path: 'dashboard', element: <BuyerDashboardPage /> },
+      { path: 'profile', element: <BuyerProfilePage /> },
+      { path: 'company', element: <CompanyProfilePage /> },
+      { path: 'rfq', element: <BuyerRFQPage /> },
+      { path: 'rfq/create', element: <BuyerRFQCreatePage /> },
+      { path: 'orders', element: <BuyerOrdersPage /> },
+      { path: 'messages', element: <BuyerMessagesPage /> },
+      { path: 'inquiry-list', element: <InquiryListPage /> },
+    ],
   },
   {
-    path: '/product/:id',
-    element: <ProductDetailPage />,
+    path: '/supplier',
+    element: <SupplierShell />,
+    children: [
+      { path: 'dashboard', element: <SupplierDashboardPage /> },
+      { path: 'products', element: <SupplierProductsPage /> },
+      { path: 'inquiries', element: <SupplierInquiriesPage /> },
+      { path: 'orders', element: <SupplierOrdersPage /> },
+      { path: 'messages', element: <SupplierMessagesPage /> },
+      { path: 'company', element: <SupplierCompanyPage /> },
+      { path: 'analytics', element: <SupplierAnalyticsPage /> },
+      { path: 'reviews', element: <SupplierReviewsPage /> },
+    ],
   },
   {
-    path: '/suppliers',
-    element: <SuppliersPage />,
-  },
-  {
-    path: '/supplier/:id',
-    element: <SupplierProfilePage />,
-  },
-  {
-    path: '/categories',
-    element: <CategoriesPage />,
-  },
-  {
-    path: '/pricing',
-    element: <PricingPage />,
-  },
-  {
-    path: '/ranking',
-    element: <RankingPage />,
-  },
-  {
-    path: '/buyers',
-    element: <BuyersPage />,
-  },
-  {
-    path: '/trade-shows',
-    element: <TradeShowsPage />,
-  },
-  {
-    path: '/news',
-    element: <NewsPage />,
-  },
-  {
-    path: '/trust',
-    element: <TrustPage />,
-  },
-  {
-    path: '/help',
-    element: <HelpPage />,
-  },
-  {
-    path: '/faq',
-    element: <HelpPage />,
-  },
-  {
-    path: '/terms',
-    element: <TermsPage />,
-  },
-  {
-    path: '/privacy',
-    element: <PrivacyPage />,
-  },
-  {
-    path: '/about',
-    element: <AboutPage />,
-  },
-  {
-    path: '/contact',
-    element: <ContactPage />,
-  },
-  {
-    path: '/become-supplier',
-    element: <BecomeSupplierPage />,
-  },
-  // Auth Routes
-  {
-    path: '/auth/login',
-    element: <LoginPage />,
-  },
-  {
-    path: '/auth/register',
-    element: <RegisterPage />,
-  },
-  {
-    path: '/auth/supplier-register',
-    element: <SupplierRegisterPage />,
-  },
-  {
-    path: '/auth/forgot-password',
-    element: <ForgotPasswordPage />,
-  },
-  {
-    path: '/auth/verify-email',
-    element: <VerifyEmailPage />,
-  },
-  {
-    path: '/auth/admin-login',
-    element: <AdminLoginPage />,
-  },
-  // Buyer Routes
-  {
-    path: '/buyer/dashboard',
-    element: <BuyerDashboardPage />,
-  },
-  {
-    path: '/buyer/profile',
-    element: <BuyerProfilePage />,
-  },
-  {
-    path: '/buyer/company',
-    element: <CompanyProfilePage />,
-  },
-  {
-    path: '/buyer/rfq',
-    element: <BuyerRFQPage />,
-  },
-  {
-    path: '/buyer/orders',
-    element: <BuyerOrdersPage />,
-  },
-  {
-    path: '/buyer/messages',
-    element: <BuyerMessagesPage />,
-  },
-  {
-    path: '/buyer/inquiry-list',
-    element: <InquiryListPage />,
-  },
-  // Supplier Routes
-  {
-    path: '/supplier/dashboard',
-    element: <SupplierDashboardPage />,
-  },
-  {
-    path: '/supplier/products',
-    element: <SupplierProductsPage />,
-  },
-  {
-    path: '/supplier/inquiries',
-    element: <SupplierInquiriesPage />,
-  },
-  {
-    path: '/supplier/orders',
-    element: <SupplierOrdersPage />,
-  },
-  {
-    path: '/supplier/messages',
-    element: <SupplierMessagesPage />,
-  },
-  {
-    path: '/supplier/company',
-    element: <SupplierCompanyPage />,
-  },
-  {
-    path: '/supplier/analytics',
-    element: <SupplierAnalyticsPage />,
-  },
-  {
-    path: '/supplier/reviews',
-    element: <SupplierReviewsPage />,
-  },
-  // Admin Routes
-  {
-    path: '/admin/dashboard',
-    element: <AdminDashboardPage />,
-  },
-  {
-    path: '/admin/buyers',
-    element: <AdminBuyersPage />,
-  },
-  {
-    path: '/admin/suppliers',
-    element: <AdminSuppliersPage />,
-  },
-  {
-    path: '/admin/products',
-    element: <AdminProductsPage />,
-  },
-  {
-    path: '/admin/categories',
-    element: <AdminCategoriesPage />,
-  },
-  {
-    path: '/admin/orders',
-    element: <AdminOrdersPage />,
-  },
-  {
-    path: '/admin/content',
-    element: <AdminContentPage />,
-  },
-  {
-    path: '/admin/support',
-    element: <AdminSupportPage />,
-  },
-  {
-    path: '/admin/disputes',
-    element: <AdminDisputesPage />,
-  },
-  {
-    path: '/admin/analytics',
-    element: <AdminAnalyticsPage />,
-  },
-  {
-    path: '/admin/settings',
-    element: <AdminSettingsPage />,
+    path: '/admin',
+    element: <AdminShell />,
+    children: [
+      { path: 'dashboard', element: <AdminDashboardPage /> },
+      { path: 'buyers', element: <AdminBuyersPage /> },
+      { path: 'suppliers', element: <AdminSuppliersPage /> },
+      { path: 'products', element: <AdminProductsPage /> },
+      { path: 'categories', element: <AdminCategoriesPage /> },
+      { path: 'orders', element: <AdminOrdersPage /> },
+      { path: 'content', element: <AdminContentPage /> },
+      { path: 'support', element: <AdminSupportPage /> },
+      { path: 'disputes', element: <AdminDisputesPage /> },
+      { path: 'analytics', element: <AdminAnalyticsPage /> },
+      { path: 'settings', element: <AdminSettingsPage /> },
+    ],
   },
   {
     path: '*',
-    element: <NotFoundPage />,
+    element: (
+      <Layout>
+        <NotFoundPage />
+      </Layout>
+    ),
   },
 ];
 

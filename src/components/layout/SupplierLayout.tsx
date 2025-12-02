@@ -37,7 +37,7 @@ export default function SupplierLayout({ children }: { children: React.ReactNode
               <i className="ri-menu-line text-xl"></i>
             </button>
             <h1 className="text-2xl font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              GlobalTrade
+              Global Connection Supplier
             </h1>
           </div>
 

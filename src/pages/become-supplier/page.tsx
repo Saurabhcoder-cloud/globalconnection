@@ -1,340 +1,87 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+const reasons = [
+  {
+    title: 'Access global buyers',
+    detail: 'Connect with vetted procurement teams looking for reliable manufacturing partners.',
+  },
+  {
+    title: 'Showcase capabilities',
+    detail: 'Publish certifications, capacity, and lead times so buyers can qualify you faster.',
+  },
+  {
+    title: 'Close deals faster',
+    detail: 'Use embedded chat, quotes, and escrow-style payments to move from inquiry to PO.',
+  },
+];
+
+const steps = [
+  'Create your supplier profile with company verification',
+  'Upload hero products and add capabilities, MOQs, and lead times',
+  'Respond to buyer RFQs with compliant quotes and documents',
+  'Manage orders, production updates, and logistics in one workspace',
+];
 
 export default function BecomeSupplierPage() {
-  const navigate = useNavigate();
-
   return (
-    <div className="min-h-screen bg-white">
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          <img
-            src="https://readdy.ai/api/search-image?query=modern%20manufacturing%20facility%20with%20automated%20production%20lines%20and%20quality%20control%20systems%20bright%20industrial%20workspace%20with%20workers%20and%20machinery%20representing%20global%20B2B%20commerce%20professional%20corporate%20photography%20high%20quality&width=1920&height=1080&seq=supplier-hero&orientation=landscape"
-            alt="Become a Supplier"
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Grow Your Business<br />with Global Connection
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto">
-            Connect with millions of buyers worldwide and expand your market reach
-          </p>
-          <button
-            onClick={() => navigate('/auth/supplier-register')}
-            className="px-10 py-4 bg-emerald-600 text-white text-lg font-medium rounded-lg hover:bg-emerald-700 transition-all whitespace-nowrap"
-          >
-            Start Selling Today
-          </button>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              Why Sell on Global Connection?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join thousands of successful suppliers growing their business on our platform
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-global-line text-white text-3xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Global Reach</h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Access 5+ million active buyers from 180+ countries actively searching for products like yours.
+    <div className="bg-gray-50 pb-16 pt-24">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="rounded-2xl bg-white p-8 shadow-sm">
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+            <div className="space-y-4">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-600">Supplier onboarding</p>
+              <h1 className="text-3xl font-bold text-slate-900">Grow with Global Connection buyers</h1>
+              <p className="text-sm text-slate-600">
+                Join a curated network of manufacturers and wholesalers. Showcase your capabilities, verify your business, and respond to high-intent RFQs with confidence.
               </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-shield-check-line text-white text-3xl"></i>
+              <div className="flex flex-wrap gap-3">
+                <Link className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700" to="/auth/supplier-register">
+                  Become a supplier
+                </Link>
+                <Link className="rounded-lg border border-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700 hover:border-emerald-300" to="/supplier/dashboard">
+                  View supplier console
+                </Link>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Verified Badge</h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Build trust with buyers through our verification program and stand out from competitors.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-line-chart-line text-white text-3xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Grow Sales</h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Increase your revenue with powerful tools, analytics, and marketing features.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-customer-service-line text-white text-3xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Dedicated Support</h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Get help from our expert team whenever you need it, 24/7 support available.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-lock-line text-white text-3xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Payments</h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Protect your transactions with our secure payment system and trade assurance.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
-              <div className="w-16 h-16 bg-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <i className="ri-dashboard-line text-white text-3xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Easy Management</h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Manage products, orders, and inquiries from one powerful dashboard.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              How to Get Started
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Four simple steps to start selling on Global Connection
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">
-                1
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Register</h3>
-              <p className="text-sm text-gray-600">
-                Create your supplier account with basic company information
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">
-                2
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Get Verified</h3>
-              <p className="text-sm text-gray-600">
-                Submit documents for verification to build buyer trust
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">
-                3
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">List Products</h3>
-              <p className="text-sm text-gray-600">
-                Upload your product catalog with images and details
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold">
-                4
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Start Selling</h3>
-              <p className="text-sm text-gray-600">
-                Receive inquiries and start fulfilling orders
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              Success Stories
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from suppliers who have grown their business with Global Connection
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'TechVision Electronics',
-                location: 'Shenzhen, China',
-                quote: 'Global Connection helped us reach buyers in 45 countries. Our sales increased by 300% in the first year.',
-                growth: '+300% Sales',
-                image: 'https://readdy.ai/api/search-image?query=modern%20electronics%20manufacturing%20facility%20with%20circuit%20boards%20and%20quality%20control%20clean%20professional%20workspace%20high%20quality&width=400&height=300&seq=success1&orientation=landscape'
-              },
-              {
-                name: 'Global Textile Co.',
-                location: 'Mumbai, India',
-                quote: 'The verification badge gave us instant credibility. We now work with major brands worldwide.',
-                growth: '45 Countries',
-                image: 'https://readdy.ai/api/search-image?query=textile%20manufacturing%20facility%20with%20fabric%20rolls%20and%20weaving%20machines%20bright%20clean%20workspace%20high%20quality&width=400&height=300&seq=success2&orientation=landscape'
-              },
-              {
-                name: 'EcoPackaging Solutions',
-                location: 'Bangkok, Thailand',
-                quote: 'The platform is easy to use and the support team is amazing. Highly recommended for exporters.',
-                growth: '5-Star Rating',
-                image: 'https://readdy.ai/api/search-image?query=eco-friendly%20packaging%20production%20facility%20with%20sustainable%20materials%20clean%20modern%20workspace%20high%20quality&width=400&height=300&seq=success3&orientation=landscape'
-              },
-            ].map((story, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                <div className="w-full h-48">
-                  <img src={story.image} alt={story.name} className="w-full h-full object-cover object-top" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900">{story.name}</h3>
-                      <p className="text-sm text-gray-600">{story.location}</p>
-                    </div>
-                    <div className="px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-xs font-medium">
-                      {story.growth}
-                    </div>
+              <div className="grid gap-3 md:grid-cols-3">
+                {reasons.map((reason) => (
+                  <div key={reason.title} className="rounded-xl bg-emerald-50 p-4 text-emerald-900">
+                    <h3 className="text-base font-semibold">{reason.title}</h3>
+                    <p className="mt-1 text-sm text-emerald-800">{reason.detail}</p>
                   </div>
-                  <p className="text-sm text-gray-600 italic leading-relaxed">"{story.quote}"</p>
-                </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl bg-slate-900 p-6 text-white">
+              <h3 className="text-lg font-semibold">Your first 30 days</h3>
+              <p className="mt-2 text-sm text-white/80">
+                Ship samples, publish certificates, and enable Trade Assurance so buyers trust your fulfillment.
+              </p>
+              <div className="mt-4 space-y-3 text-sm text-white/80">
+                {steps.map((step, idx) => (
+                  <div key={step} className="flex items-start gap-3 rounded-lg bg-white/10 px-3 py-2">
+                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-white">
+                      {idx + 1}
+                    </span>
+                    <span>{step}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {["Highlight verified badges", "Respond faster with templates", "Show fulfillment proofs"].map((tip) => (
+              <div key={tip} className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+                <p className="text-sm font-semibold text-slate-900">{tip}</p>
+                <p className="mt-1 text-sm text-slate-600">
+                  Make it easy for buyers to qualify your factory and start production with confidence.
+                </p>
               </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Pricing Preview */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              Flexible Pricing Plans
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Free</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-6">$0<span className="text-lg text-gray-600 font-normal">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start text-sm text-gray-600">
-                  <i className="ri-check-line text-emerald-600 mr-2 mt-0.5"></i>
-                  <span>Up to 10 products</span>
-                </li>
-                <li className="flex items-start text-sm text-gray-600">
-                  <i className="ri-check-line text-emerald-600 mr-2 mt-0.5"></i>
-                  <span>Basic analytics</span>
-                </li>
-                <li className="flex items-start text-sm text-gray-600">
-                  <i className="ri-check-line text-emerald-600 mr-2 mt-0.5"></i>
-                  <span>Email support</span>
-                </li>
-              </ul>
-              <button className="w-full px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-all whitespace-nowrap">
-                Get Started
-              </button>
-            </div>
-
-            <div className="bg-emerald-600 rounded-xl p-8 shadow-lg transform scale-105">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-bold text-white">Professional</h3>
-                <span className="px-2 py-1 bg-white/20 text-white text-xs font-medium rounded-full">Popular</span>
-              </div>
-              <div className="text-4xl font-bold text-white mb-6">$99<span className="text-lg text-white/80 font-normal">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start text-sm text-white">
-                  <i className="ri-check-line mr-2 mt-0.5"></i>
-                  <span>Unlimited products</span>
-                </li>
-                <li className="flex items-start text-sm text-white">
-                  <i className="ri-check-line mr-2 mt-0.5"></i>
-                  <span>Verified badge</span>
-                </li>
-                <li className="flex items-start text-sm text-white">
-                  <i className="ri-check-line mr-2 mt-0.5"></i>
-                  <span>Advanced analytics</span>
-                </li>
-                <li className="flex items-start text-sm text-white">
-                  <i className="ri-check-line mr-2 mt-0.5"></i>
-                  <span>Priority support</span>
-                </li>
-              </ul>
-              <button className="w-full px-6 py-3 bg-white text-emerald-600 font-medium rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap">
-                Start Free Trial
-              </button>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-6">Custom</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start text-sm text-gray-600">
-                  <i className="ri-check-line text-emerald-600 mr-2 mt-0.5"></i>
-                  <span>Everything in Pro</span>
-                </li>
-                <li className="flex items-start text-sm text-gray-600">
-                  <i className="ri-check-line text-emerald-600 mr-2 mt-0.5"></i>
-                  <span>Dedicated account manager</span>
-                </li>
-                <li className="flex items-start text-sm text-gray-600">
-                  <i className="ri-check-line text-emerald-600 mr-2 mt-0.5"></i>
-                  <span>Custom integrations</span>
-                </li>
-              </ul>
-              <button className="w-full px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-all whitespace-nowrap">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
-            <a href="/pricing" className="text-emerald-600 hover:text-emerald-700 font-medium cursor-pointer">
-              View detailed pricing →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-teal-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Ready to Grow Your Business?
-          </h2>
-          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Join 150,000+ suppliers already selling on Global Connection
-          </p>
-          <button
-            onClick={() => navigate('/auth/supplier-register')}
-            className="px-10 py-4 bg-white text-emerald-600 text-lg font-medium rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap"
-          >
-            Register Now - It's Free
-          </button>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
