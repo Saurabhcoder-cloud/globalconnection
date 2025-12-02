@@ -13,6 +13,7 @@ import {
   Store,
   Users
 } from 'lucide-react';
+import '@/styles/ali.css';
 
 const categories = [
   'All categories',
@@ -140,6 +141,50 @@ const steps = [
   'Pay with confidence',
   'Fulfill with transparency',
   'Manage with ease'
+];
+
+const learnHighlights = [
+  {
+    title: 'Sourcing coverage',
+    description: 'Curated categories with MOQ, lead time, and compliance filters to shortlist the right fit.',
+    tag: 'Categories'
+  },
+  {
+    title: 'Supplier transparency',
+    description: 'Company profiles show verification, certifications, capacity signals, and on-time delivery performance.',
+    tag: 'Verification'
+  },
+  {
+    title: 'Deal workspace',
+    description: 'RFQs, quotes, and contracts organized with milestone-based payments and audit trails.',
+    tag: 'Collaboration'
+  },
+  {
+    title: 'Fulfillment control',
+    description: 'Inspection options, shipping visibility, and dispute support keep orders protected end to end.',
+    tag: 'Protection'
+  }
+];
+
+const learnSteps = [
+  {
+    title: 'Discover & compare',
+    description: 'Search by specification, region, and certifications, then benchmark verified factories side by side.'
+  },
+  {
+    title: 'Negotiate with clarity',
+    description: 'Share RFQs, request samples, and align on capacity and lead times before you commit.'
+  },
+  {
+    title: 'Control every milestone',
+    description: 'Lock in protected payments, inspections, and logistics so each shipment stays on track.'
+  }
+];
+
+const learnMetrics = [
+  { value: '190+ countries', label: 'buyer reach & logistics corridors supported' },
+  { value: '72h avg', label: 'quote responses on active RFQs' },
+  { value: '4.8 / 5', label: 'average supplier reliability within pilot cohorts' }
 ];
 
 export default function HomePage() {
@@ -392,6 +437,82 @@ export default function HomePage() {
               "As an entrepreneur devoted to creating premium beauty products, Global Connection has been my trusted partner for
               scaling supplier relationships and managing shipments on time."
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Learn about Global Connection */}
+      <section className="ali-section">
+        <div className="ali-shell">
+          <div className="ali-header">
+            <span className="ali-kicker">Learn about Global Connection</span>
+            <h3 className="ali-title">Inside the Global Connection trade platform</h3>
+            <p className="ali-subtitle">
+              Built for teams that source internationally, manage RFQs, and ship at scale. Explore how Global Connection blends
+              discovery, quality assurance, and protected payments in one experience.
+            </p>
+            <p className="ali-note">Built with original design language inspired by leading B2B marketplaces.</p>
+          </div>
+
+          <div className="ali-layout">
+            <div className="ali-spotlight">
+              <div className="ali-spotlight-title">How the marketplace keeps deals moving</div>
+              <p className="ali-spotlight-desc">
+                Pair fast discovery with supplier transparency, trade protection, and logistics visibility so every order stays on
+                track.
+              </p>
+              <div className="ali-pill-row">
+                <span className="ali-pill">Trade protection</span>
+                <span className="ali-pill">Supplier verification</span>
+                <span className="ali-pill">RFQ to delivery</span>
+                <span className="ali-pill">Collaboration</span>
+              </div>
+              <ul className="ali-list">
+                <li>
+                  <span className="ali-list-strong">Plan</span>
+                  <span>Source by specification, region, compliance, or lead time to shortlist the right factories.</span>
+                </li>
+                <li>
+                  <span className="ali-list-strong">Execute</span>
+                  <span>Request quotes, approve samples, and align on capacity with shared milestones.</span>
+                </li>
+                <li>
+                  <span className="ali-list-strong">Protect</span>
+                  <span>Use safeguarded payments, inspections, and shipment tracking to keep every PO accountable.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="ali-card-grid">
+              {learnHighlights.map((item) => (
+                <div key={item.title} className="ali-card">
+                  <span className="ali-tag">{item.tag}</span>
+                  <div className="ali-card-title">{item.title}</div>
+                  <p className="ali-card-desc">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="ali-stepper">
+            {learnSteps.map((step, index) => (
+              <div key={step.title} className="ali-step">
+                <div className="ali-step-index">{index + 1}</div>
+                <div className="space-y-1">
+                  <div className="ali-step-title">{step.title}</div>
+                  <div className="ali-step-desc">{step.description}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="ali-metrics">
+            {learnMetrics.map((metric) => (
+              <div key={metric.label} className="ali-metric">
+                <div className="ali-metric-value">{metric.value}</div>
+                <div className="ali-metric-label">{metric.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
