@@ -1,5 +1,5 @@
 export function isIndiaUser(): boolean {
-  if (typeof navigator === 'undefined') return false;
+  if (typeof window === 'undefined' || typeof navigator === 'undefined') return false;
 
   const languageMatches = navigator.languages?.some(lang => /-IN$/i.test(lang)) || /-IN$/i.test(navigator.language || '');
 
