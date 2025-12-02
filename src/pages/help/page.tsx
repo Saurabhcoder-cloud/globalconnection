@@ -17,7 +17,7 @@ export default function HelpPage() {
   const faqs = [
     {
       category: 'getting-started',
-      question: 'How do I create an account on TradeHub?',
+      question: 'How do I create an account on Global Connection?',
       answer: 'To create an account, click the "Register" button in the top right corner. Choose whether you want to register as a buyer or supplier, then fill in your details including email, password, and company information. You\'ll receive a verification email to activate your account.'
     },
     {
@@ -47,8 +47,8 @@ export default function HelpPage() {
     },
     {
       category: 'selling',
-      question: 'What are the fees for selling on TradeHub?',
-      answer: 'TradeHub offers different membership tiers. The free plan allows basic listings with limited features. Premium plans offer enhanced visibility, unlimited products, priority support, and advanced analytics. Check our Pricing page for detailed information.'
+      question: 'What are the fees for selling on Global Connection?',
+      answer: 'Global Connection offers different membership tiers. The free plan allows basic listings with limited features. Premium plans offer enhanced visibility, unlimited products, priority support, and advanced analytics. Check our Pricing page for detailed information.'
     },
     {
       category: 'selling',
@@ -58,7 +58,7 @@ export default function HelpPage() {
     {
       category: 'payments',
       question: 'What payment methods are accepted?',
-      answer: 'TradeHub supports various payment methods including bank transfers, credit cards, PayPal, and trade assurance. Payment terms are negotiated between buyers and suppliers, with options for deposits, full payment, or installments.'
+      answer: 'Global Connection supports various payment methods including bank transfers, credit cards, PayPal, and trade assurance. Payment terms are negotiated between buyers and suppliers, with options for deposits, full payment, or installments.'
     },
     {
       category: 'payments',
@@ -109,7 +109,7 @@ export default function HelpPage() {
               Help Center
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Find answers to common questions and learn how to make the most of TradeHub
+              Find answers to common questions and learn how to make the most of Global Connection
             </p>
             
             {/* Search Bar */}

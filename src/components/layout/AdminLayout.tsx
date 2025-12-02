@@ -49,7 +49,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <h1 className="text-xl font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Admin Panel
                 </h1>
-                <p className="text-xs text-gray-500">TradeHub Management</p>
+                <p className="text-xs text-gray-500">Global Connection Management</p>
               </div>
             </div>
           </div>

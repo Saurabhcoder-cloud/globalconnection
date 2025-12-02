@@ -62,7 +62,7 @@ export default function AdminSettingsPage() {
           <div className="space-y-6">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">Site Name</label>
-              <input type="text" defaultValue="TradeHub" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-sm" />
+              <input type="text" defaultValue="Global Connection" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-sm" />
             </div>
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">Site Logo</label>

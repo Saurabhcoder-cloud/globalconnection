@@ -19,7 +19,7 @@ export default function BecomeSupplierPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Grow Your Business<br />with TradeHub
+            Grow Your Business<br />with Global Connection
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto">
             Connect with millions of buyers worldwide and expand your market reach
@@ -38,7 +38,7 @@ export default function BecomeSupplierPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              Why Sell on TradeHub?
+              Why Sell on Global Connection?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Join thousands of successful suppliers growing their business on our platform
@@ -117,7 +117,7 @@ export default function BecomeSupplierPage() {
               How to Get Started
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Four simple steps to start selling on TradeHub
+              Four simple steps to start selling on Global Connection
             </p>
           </div>
 
@@ -173,7 +173,7 @@ export default function BecomeSupplierPage() {
               Success Stories
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from suppliers who have grown their business with TradeHub
+              Hear from suppliers who have grown their business with Global Connection
             </p>
           </div>
 
@@ -182,7 +182,7 @@ export default function BecomeSupplierPage() {
               {
                 name: 'TechVision Electronics',
                 location: 'Shenzhen, China',
-                quote: 'TradeHub helped us reach buyers in 45 countries. Our sales increased by 300% in the first year.',
+                quote: 'Global Connection helped us reach buyers in 45 countries. Our sales increased by 300% in the first year.',
                 growth: '+300% Sales',
                 image: 'https://readdy.ai/api/search-image?query=modern%20electronics%20manufacturing%20facility%20with%20circuit%20boards%20and%20quality%20control%20clean%20professional%20workspace%20high%20quality&width=400&height=300&seq=success1&orientation=landscape'
               },
@@ -325,7 +325,7 @@ export default function BecomeSupplierPage() {
             Ready to Grow Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Join 150,000+ suppliers already selling on TradeHub
+            Join 150,000+ suppliers already selling on Global Connection
           </p>
           <button
             onClick={() => navigate('/auth/supplier-register')}

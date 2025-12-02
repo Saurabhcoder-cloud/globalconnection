@@ -43,7 +43,7 @@ export default function BuyerLayout({ children }: BuyerLayoutProps) {
                 <i className="ri-menu-line text-xl"></i>
               </button>
               <a href="/" className="text-2xl font-bold text-emerald-600" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                TradeHub
+                Global Connection
               </a>
               <span className="hidden sm:block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">
                 Buyer
