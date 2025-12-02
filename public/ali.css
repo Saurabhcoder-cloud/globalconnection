@@ -1,3 +1,9 @@
+/* Alibaba-style landing section (scoped with ali- prefix) */
+.ali-page {
+  background: #0b1221;
+  color: #e2e8f0;
+}
+
 .ali-section {
   background: linear-gradient(135deg, #0f172a 0%, #0b2038 50%, #0f172a 100%);
   color: #e2e8f0;

@@ -13,7 +13,6 @@ import {
   Store,
   Users
 } from 'lucide-react';
-import '@/styles/ali.css';
 
 const categories = [
   'All categories',
@@ -442,80 +441,82 @@ export default function HomePage() {
       </section>
 
       {/* Learn about Global Connection */}
-      <section className="ali-section">
-        <div className="ali-shell">
-          <div className="ali-header">
-            <span className="ali-kicker">Learn about Global Connection</span>
-            <h3 className="ali-title">Inside the Global Connection trade platform</h3>
-            <p className="ali-subtitle">
-              Built for teams that source internationally, manage RFQs, and ship at scale. Explore how Global Connection blends
-              discovery, quality assurance, and protected payments in one experience.
-            </p>
-            <p className="ali-note">Built with original design language inspired by leading B2B marketplaces.</p>
-          </div>
-
-          <div className="ali-layout">
-            <div className="ali-spotlight">
-              <div className="ali-spotlight-title">How the marketplace keeps deals moving</div>
-              <p className="ali-spotlight-desc">
-                Pair fast discovery with supplier transparency, trade protection, and logistics visibility so every order stays on
-                track.
+      <div className="ali-page">
+        <section className="ali-section">
+          <div className="ali-shell">
+            <div className="ali-header">
+              <span className="ali-kicker">Learn about Global Connection</span>
+              <h3 className="ali-title">Inside the Global Connection trade platform</h3>
+              <p className="ali-subtitle">
+                Built for teams that source internationally, manage RFQs, and ship at scale. Explore how Global Connection blends
+                discovery, quality assurance, and protected payments in one experience.
               </p>
-              <div className="ali-pill-row">
-                <span className="ali-pill">Trade protection</span>
-                <span className="ali-pill">Supplier verification</span>
-                <span className="ali-pill">RFQ to delivery</span>
-                <span className="ali-pill">Collaboration</span>
-              </div>
-              <ul className="ali-list">
-                <li>
-                  <span className="ali-list-strong">Plan</span>
-                  <span>Source by specification, region, compliance, or lead time to shortlist the right factories.</span>
-                </li>
-                <li>
-                  <span className="ali-list-strong">Execute</span>
-                  <span>Request quotes, approve samples, and align on capacity with shared milestones.</span>
-                </li>
-                <li>
-                  <span className="ali-list-strong">Protect</span>
-                  <span>Use safeguarded payments, inspections, and shipment tracking to keep every PO accountable.</span>
-                </li>
-              </ul>
+              <p className="ali-note">Built with original design language inspired by leading B2B marketplaces.</p>
             </div>
 
-            <div className="ali-card-grid">
-              {learnHighlights.map((item) => (
-                <div key={item.title} className="ali-card">
-                  <span className="ali-tag">{item.tag}</span>
-                  <div className="ali-card-title">{item.title}</div>
-                  <p className="ali-card-desc">{item.description}</p>
+            <div className="ali-layout">
+              <div className="ali-spotlight">
+                <div className="ali-spotlight-title">How the marketplace keeps deals moving</div>
+                <p className="ali-spotlight-desc">
+                  Pair fast discovery with supplier transparency, trade protection, and logistics visibility so every order stays
+                  on track.
+                </p>
+                <div className="ali-pill-row">
+                  <span className="ali-pill">Trade protection</span>
+                  <span className="ali-pill">Supplier verification</span>
+                  <span className="ali-pill">RFQ to delivery</span>
+                  <span className="ali-pill">Collaboration</span>
+                </div>
+                <ul className="ali-list">
+                  <li>
+                    <span className="ali-list-strong">Plan</span>
+                    <span>Source by specification, region, compliance, or lead time to shortlist the right factories.</span>
+                  </li>
+                  <li>
+                    <span className="ali-list-strong">Execute</span>
+                    <span>Request quotes, approve samples, and align on capacity with shared milestones.</span>
+                  </li>
+                  <li>
+                    <span className="ali-list-strong">Protect</span>
+                    <span>Use safeguarded payments, inspections, and shipment tracking to keep every PO accountable.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="ali-card-grid">
+                {learnHighlights.map((item) => (
+                  <div key={item.title} className="ali-card">
+                    <span className="ali-tag">{item.tag}</span>
+                    <div className="ali-card-title">{item.title}</div>
+                    <p className="ali-card-desc">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="ali-stepper">
+              {learnSteps.map((step, index) => (
+                <div key={step.title} className="ali-step">
+                  <div className="ali-step-index">{index + 1}</div>
+                  <div className="space-y-1">
+                    <div className="ali-step-title">{step.title}</div>
+                    <div className="ali-step-desc">{step.description}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="ali-metrics">
+              {learnMetrics.map((metric) => (
+                <div key={metric.label} className="ali-metric">
+                  <div className="ali-metric-value">{metric.value}</div>
+                  <div className="ali-metric-label">{metric.label}</div>
                 </div>
               ))}
             </div>
           </div>
-
-          <div className="ali-stepper">
-            {learnSteps.map((step, index) => (
-              <div key={step.title} className="ali-step">
-                <div className="ali-step-index">{index + 1}</div>
-                <div className="space-y-1">
-                  <div className="ali-step-title">{step.title}</div>
-                  <div className="ali-step-desc">{step.description}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="ali-metrics">
-            {learnMetrics.map((metric) => (
-              <div key={metric.label} className="ali-metric">
-                <div className="ali-metric-value">{metric.value}</div>
-                <div className="ali-metric-label">{metric.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* CTA */}
       <section className="bg-white py-16">
