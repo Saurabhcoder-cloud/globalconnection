@@ -82,7 +82,7 @@ export default function PricingPage() {
             Simple pricing for your B2B growth
           </h1>
           <p className="text-lg text-muted-foreground">
-            Global Connection keeps your buyers, suppliers, and operations in one connected platform with predictable pricing.
+            Global Connection 21 keeps your buyers, suppliers, and operations in one connected platform with predictable pricing.
           </p>
           <div className="flex flex-col items-center gap-3 text-sm text-muted-foreground sm:flex-row sm:justify-center">
             <p className="text-sm text-muted-foreground">{currencyNote}. Contact us for custom terms.</p>

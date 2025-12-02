@@ -188,7 +188,7 @@ const learnMetrics = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-slate-50 text-slate-900">
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

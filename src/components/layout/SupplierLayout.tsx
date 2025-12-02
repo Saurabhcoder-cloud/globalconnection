@@ -25,7 +25,7 @@ export default function SupplierLayout({ children }: { children: React.ReactNode
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Top Header */}
       <header className="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-40">
         <div className="flex items-center justify-between px-6 py-4">
@@ -37,7 +37,7 @@ export default function SupplierLayout({ children }: { children: React.ReactNode
               <i className="ri-menu-line text-xl"></i>
             </button>
             <h1 className="text-2xl font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              Global Connection Supplier
+              Global Connection 21 Supplier
             </h1>
           </div>
 
@@ -148,7 +148,7 @@ export default function SupplierLayout({ children }: { children: React.ReactNode
           sidebarOpen ? 'ml-64' : 'ml-20'
         }`}
       >
-        <div className="p-8">
+        <div className="p-4 sm:p-6 lg:p-8 bg-gray-50 min-h-[calc(100vh-4rem)]">
           {children}
         </div>
       </main>

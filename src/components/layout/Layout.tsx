@@ -4,9 +4,9 @@ import Footer from '@/components/layout/Footer';
 
 export default function Layout({ children }: PropsWithChildren) {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-foreground">
       <Header />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 w-full bg-white/60">{children}</main>
       <Footer />
     </div>
   );
