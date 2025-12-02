@@ -1,17 +1,14 @@
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-emerald-600 to-teal-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              About TradeHub
+              About Global Connection
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Connecting global businesses through trusted B2B trade since 2010
@@ -61,7 +58,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              TradeHub by the Numbers
+              Global Connection by the Numbers
             </h2>
             <p className="text-lg text-gray-600">
               Building trust through transparency and results
@@ -97,13 +94,13 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-base text-gray-600 leading-relaxed">
               <p>
-                Founded in 2010, TradeHub began with a simple yet powerful vision: to make global B2B trade accessible, transparent, and efficient for businesses of all sizes. What started as a small platform connecting local manufacturers with international buyers has grown into one of the world's leading B2B marketplaces.
+                Founded in 2010, Global Connection began with a simple yet powerful vision: to make global B2B trade accessible, transparent, and efficient for businesses of all sizes. What started as a small platform connecting local manufacturers with international buyers has grown into one of the world's leading B2B marketplaces.
               </p>
               <p>
                 Over the past decade, we've witnessed the transformative power of technology in breaking down barriers to international trade. We've invested heavily in building a robust platform that not only connects buyers and suppliers but also provides the tools, resources, and support needed to facilitate successful transactions.
               </p>
               <p>
-                Today, TradeHub serves millions of businesses across 180+ countries, facilitating billions of dollars in trade annually. Our success is built on three core pillars: trust, transparency, and technology. Every supplier on our platform undergoes rigorous verification, every transaction is protected, and every interaction is designed to be seamless and secure.
+                Today, Global Connection serves millions of businesses across 180+ countries, facilitating billions of dollars in trade annually. Our success is built on three core pillars: trust, transparency, and technology. Every supplier on our platform undergoes rigorous verification, every transaction is protected, and every interaction is designed to be seamless and secure.
               </p>
               <p>
                 As we look to the future, we remain committed to our founding mission: empowering businesses to grow through global trade. We continue to innovate, expand our services, and build new features that make international commerce easier, safer, and more profitable for all our users.
@@ -191,7 +188,7 @@ export default function AboutPage() {
               Leadership Team
             </h2>
             <p className="text-lg text-gray-600">
-              Meet the people driving TradeHub forward
+              Meet the people driving Global Connection forward
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -220,7 +217,7 @@ export default function AboutPage() {
             Join Our Growing Community
           </h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Be part of the global B2B revolution and grow your business with TradeHub
+            Be part of the global B2B revolution and grow your business with Global Connection
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a href="/auth/register?type=buyer" className="px-8 py-4 bg-white text-emerald-600 font-medium rounded-lg hover:bg-gray-50 transition-all whitespace-nowrap cursor-pointer">
@@ -232,8 +229,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

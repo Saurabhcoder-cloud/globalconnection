@@ -30,7 +30,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Top Header */}
       <header className="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-40">
         <div className="flex items-center justify-between px-6 py-4">
@@ -47,9 +47,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  Admin Panel
+                  Global Connection 21 Admin
                 </h1>
-                <p className="text-xs text-gray-500">TradeHub Management</p>
+                <p className="text-xs text-gray-500">Global Connection Management</p>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           sidebarOpen ? 'ml-64' : 'ml-20'
         }`}
       >
-        <div className="p-8">
+        <div className="p-4 sm:p-6 lg:p-8 bg-gray-50 min-h-[calc(100vh-4rem)]">
           {children}
         </div>
       </main>

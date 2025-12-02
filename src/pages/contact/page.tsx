@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -20,7 +18,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-emerald-600 to-teal-700">
@@ -250,8 +247,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

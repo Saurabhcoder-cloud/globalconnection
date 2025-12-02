@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import Header from '@/components/layout/Header';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -18,8 +17,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-muted/30">
-      <Header />
+    <div className="bg-muted/30">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-md mx-auto">
           <Card>

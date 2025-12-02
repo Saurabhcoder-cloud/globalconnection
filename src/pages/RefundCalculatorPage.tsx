@@ -1,13 +1,11 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import Header from '@/components/layout/Header';
 import { Calculator } from 'lucide-react';
 
 export default function RefundCalculatorPage() {
   return (
-    <div className="min-h-screen bg-muted/30">
-      <Header />
+    <div className="bg-muted/30">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8">

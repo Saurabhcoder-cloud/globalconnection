@@ -29,7 +29,7 @@ export default function BuyerLayout({ children }: BuyerLayoutProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Top Navigation */}
       <nav className="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
         <div className="px-4 sm:px-6 lg:px-8">
@@ -43,7 +43,7 @@ export default function BuyerLayout({ children }: BuyerLayoutProps) {
                 <i className="ri-menu-line text-xl"></i>
               </button>
               <a href="/" className="text-2xl font-bold text-emerald-600" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                TradeHub
+                Global Connection 21
               </a>
               <span className="hidden sm:block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">
                 Buyer
@@ -118,7 +118,7 @@ export default function BuyerLayout({ children }: BuyerLayoutProps) {
         </div>
       </nav>
 
-      <div className="flex pt-16">
+      <div className="flex flex-1 pt-16">
         {/* Sidebar */}
         <aside
           className={`fixed lg:static inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 lg:translate-x-0 ${
@@ -169,7 +169,7 @@ export default function BuyerLayout({ children }: BuyerLayoutProps) {
         )}
 
         {/* Main Content */}
-        <main className="flex-1 p-6 lg:p-8">
+        <main className="flex-1 bg-gray-50 p-4 sm:p-6 lg:p-8">
           <div className="max-w-7xl mx-auto">
             {children}
           </div>

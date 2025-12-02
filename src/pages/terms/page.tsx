@@ -1,10 +1,7 @@
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 bg-gradient-to-br from-emerald-600 to-teal-700">
@@ -26,7 +23,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  By accessing and using TradeHub's B2B marketplace platform, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these terms, please do not use our services.
+                  By accessing and using Global Connection's B2B marketplace platform, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these terms, please do not use our services.
                 </p>
               </div>
 
@@ -63,7 +60,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Buyer Responsibilities</h2>
                 <p className="text-base text-gray-600 leading-relaxed mb-3">
-                  As a buyer on TradeHub, you agree to:
+                  As a buyer on Global Connection, you agree to:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-base text-gray-600">
                   <li>Conduct due diligence when selecting suppliers</li>
@@ -78,7 +75,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Supplier Responsibilities</h2>
                 <p className="text-base text-gray-600 leading-relaxed mb-3">
-                  As a supplier on TradeHub, you agree to:
+                  As a supplier on Global Connection, you agree to:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-base text-gray-600">
                   <li>Provide accurate product descriptions and specifications</li>
@@ -94,42 +91,42 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Product Listings</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  Suppliers are responsible for the accuracy of their product listings. TradeHub reserves the right to remove any listings that violate our policies, contain prohibited items, or are deemed inappropriate. We do not guarantee the accuracy of product information provided by suppliers.
+                  Suppliers are responsible for the accuracy of their product listings. Global Connection reserves the right to remove any listings that violate our policies, contain prohibited items, or are deemed inappropriate. We do not guarantee the accuracy of product information provided by suppliers.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Transactions and Payments</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  All transactions are conducted directly between buyers and suppliers. TradeHub facilitates connections but is not a party to these transactions. Payment terms, methods, and conditions are agreed upon between buyers and suppliers. We offer optional payment protection services for eligible transactions.
+                  All transactions are conducted directly between buyers and suppliers. Global Connection facilitates connections but is not a party to these transactions. Payment terms, methods, and conditions are agreed upon between buyers and suppliers. We offer optional payment protection services for eligible transactions.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Fees and Charges</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  TradeHub may charge fees for certain services, including premium memberships, featured listings, and transaction services. All fees are clearly disclosed before you commit to any paid service. Fees are non-refundable unless otherwise stated in our refund policy.
+                  Global Connection may charge fees for certain services, including premium memberships, featured listings, and transaction services. All fees are clearly disclosed before you commit to any paid service. Fees are non-refundable unless otherwise stated in our refund policy.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Intellectual Property</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  The TradeHub platform, including its design, features, and content, is protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our express written permission. User-generated content remains the property of the respective users.
+                  The Global Connection platform, including its design, features, and content, is protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our express written permission. User-generated content remains the property of the respective users.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Dispute Resolution</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  In the event of a dispute between users, TradeHub may offer mediation services but is not obligated to resolve disputes. Users are encouraged to resolve issues directly. If mediation is unsuccessful, disputes may be subject to binding arbitration in accordance with applicable laws.
+                  In the event of a dispute between users, Global Connection may offer mediation services but is not obligated to resolve disputes. Users are encouraged to resolve issues directly. If mediation is unsuccessful, disputes may be subject to binding arbitration in accordance with applicable laws.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Limitation of Liability</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  TradeHub is not liable for any indirect, incidental, special, or consequential damages arising from your use of the platform. Our total liability shall not exceed the amount paid by you for services in the past 12 months. We do not guarantee the quality, safety, or legality of items listed on the platform.
+                  Global Connection is not liable for any indirect, incidental, special, or consequential damages arising from your use of the platform. Our total liability shall not exceed the amount paid by you for services in the past 12 months. We do not guarantee the quality, safety, or legality of items listed on the platform.
                 </p>
               </div>
 
@@ -150,7 +147,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Governing Law</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  These terms shall be governed by and construed in accordance with the laws of the jurisdiction in which TradeHub operates, without regard to its conflict of law provisions. Any legal action or proceeding shall be brought exclusively in the courts of that jurisdiction.
+                  These terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Global Connection operates, without regard to its conflict of law provisions. Any legal action or proceeding shall be brought exclusively in the courts of that jurisdiction.
                 </p>
               </div>
 
@@ -160,7 +157,7 @@ export default function TermsPage() {
                   If you have any questions about these Terms & Conditions, please contact us at:
                 </p>
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                  <p className="text-base text-gray-900 font-medium">TradeHub Legal Department</p>
+                  <p className="text-base text-gray-900 font-medium">Global Connection Legal Department</p>
                   <p className="text-sm text-gray-600">Email: legal@tradehub.com</p>
                   <p className="text-sm text-gray-600">Phone: +1 (555) 123-4567</p>
                   <p className="text-sm text-gray-600">Address: 123 Business Avenue, New York, NY 10001, USA</p>
@@ -170,8 +167,6 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

@@ -1,10 +1,7 @@
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 bg-gradient-to-br from-emerald-600 to-teal-700">
@@ -26,7 +23,7 @@ export default function PrivacyPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  At TradeHub, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our B2B marketplace platform. Please read this policy carefully to understand our practices regarding your personal data.
+                  At Global Connection, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our B2B marketplace platform. Please read this policy carefully to understand our practices regarding your personal data.
                 </p>
               </div>
 
@@ -179,7 +176,7 @@ export default function PrivacyPage() {
                   If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                 </p>
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                  <p className="text-base text-gray-900 font-medium">TradeHub Privacy Team</p>
+                  <p className="text-base text-gray-900 font-medium">Global Connection Privacy Team</p>
                   <p className="text-sm text-gray-600">Email: privacy@tradehub.com</p>
                   <p className="text-sm text-gray-600">Phone: +1 (555) 123-4567</p>
                   <p className="text-sm text-gray-600">Address: 123 Business Avenue, New York, NY 10001, USA</p>
@@ -189,8 +186,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
