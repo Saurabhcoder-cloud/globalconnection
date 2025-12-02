@@ -1,6 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function CategoriesPage() {
   const navigate = useNavigate();
@@ -138,7 +136,6 @@ export default function CategoriesPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-emerald-600 to-teal-700">
@@ -202,8 +199,6 @@ export default function CategoriesPage() {
           </button>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

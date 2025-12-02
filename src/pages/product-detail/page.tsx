@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function ProductDetailPage() {
   const { id } = useParams();
@@ -127,7 +125,6 @@ export default function ProductDetailPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
       
       <div className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -449,8 +446,6 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

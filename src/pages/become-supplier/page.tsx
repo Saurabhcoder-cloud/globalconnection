@@ -1,13 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function BecomeSupplierPage() {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -338,8 +335,6 @@ export default function BecomeSupplierPage() {
           </button>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function SuppliersPage() {
   const navigate = useNavigate();
@@ -329,7 +327,6 @@ export default function SuppliersPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
       
       <div className="pt-20">
         {/* Page Header */}
@@ -573,8 +570,6 @@ export default function SuppliersPage() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

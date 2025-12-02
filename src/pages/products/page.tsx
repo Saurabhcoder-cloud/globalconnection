@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function ProductsPage() {
   const navigate = useNavigate();
@@ -162,7 +160,6 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
       
       <div className="pt-20">
         {/* Page Header */}
@@ -383,8 +380,6 @@ export default function ProductsPage() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

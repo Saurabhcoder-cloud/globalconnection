@@ -12,6 +12,7 @@ import ChatAssistantPage from './pages/ChatAssistantPage';
 import FileUploadPage from './pages/FileUploadPage';
 import PricingPage from './pages/PricingPage';
 import './App.css';
+import Layout from './components/layout/Layout';
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <Router>
-          <div className="min-h-screen bg-background text-foreground">
+          <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
@@ -31,7 +32,7 @@ function App() {
               <Route path="/file-taxes" element={<FileUploadPage />} />
               <Route path="/pricing" element={<PricingPage />} />
             </Routes>
-          </div>
+          </Layout>
           <Toaster />
         </Router>
       </ThemeProvider>

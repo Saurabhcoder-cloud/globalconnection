@@ -1,11 +1,8 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Header from '@/components/layout/Header';
-
 export default function DashboardPage() {
   return (
-    <div className="min-h-screen bg-muted/30">
-      <Header />
+    <div className="bg-muted/30">
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">Dashboard</h1>

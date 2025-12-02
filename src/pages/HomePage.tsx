@@ -2,15 +2,11 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import { Calculator, MessageCircle, Upload, Shield, Clock, DollarSign, Users, Star, CheckCircle } from 'lucide-react';
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      <Header />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 gradient-hero opacity-10"></div>
@@ -234,7 +230,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

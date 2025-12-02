@@ -1,10 +1,7 @@
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 bg-gradient-to-br from-emerald-600 to-teal-700">
@@ -170,8 +167,6 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

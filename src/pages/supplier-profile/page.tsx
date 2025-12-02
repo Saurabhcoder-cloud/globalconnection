@@ -1,7 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
 
 export default function SupplierProfilePage() {
   const { id } = useParams();
@@ -94,7 +92,6 @@ export default function SupplierProfilePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Banner */}
       <section className="relative pt-20">
@@ -339,8 +336,6 @@ export default function SupplierProfilePage() {
           )}
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
